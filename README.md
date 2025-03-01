@@ -5,6 +5,19 @@
 [![PyPI version](https://badge.fury.io/py/webshop.svg)](https://badge.fury.io/py/webshop)
 ![Pytest workflow](https://github.com/princeton-nlp/webshop/actions/workflows/pytest.yml/badge.svg)
 
+## 🚀 Austin AI Community Hackathon Submission
+### Setup
+We will be using [llama-stack](https://github.com/meta-llama/llama-stack) which requires python 3.10 or higher. Create a new environment and install python 3.10 manually. Then follow the webshop install instructions below. Then set up llama-stack by following their instructions.
+
+### Usage
+
+Run the Llama agent demo below:
+```
+sh run_agent.sh
+```
+
+
+##
 Implementation of the WebShop environment and search agents for the paper:
 
 **[WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents](https://webshop-pnlp.github.io/)**  
