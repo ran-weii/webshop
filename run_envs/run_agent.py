@@ -17,8 +17,9 @@ from pydantic import BaseModel, create_model
 from typing import Literal, Union
 
 import os
-os.environ['TOGETHER_API_KEY'] = "e14bea8e4ea6fd032d9e30ba61d17e6eae1a619d4781ecd309a4e931b0b66aff"
-os.environ['TAVILY_SEARCH_API_KEY'] = "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"
+
+os.environ['TOGETHER_API_KEY'] = "your_token"
+os.environ['TAVILY_SEARCH_API_KEY'] = "your_token"
 
 from llama_stack_client import LlamaStackClient 
 client = LlamaStackClient(base_url="http://0.0.0.0:8321", provider_data = {"tavily_search_api_key": os.environ['TAVILY_SEARCH_API_KEY']})
