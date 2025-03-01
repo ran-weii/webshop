@@ -61,8 +61,8 @@ def index(session_id):
                 num_products=DEBUG_PROD_SIZE
             )
         search_engine = init_search_engine(num_products=DEBUG_PROD_SIZE)
-        goals = get_goals(all_products, product_prices)
-        random.seed(233)
+        goals = get_goals(all_products, product_prices, human_goals=True)
+        # random.seed(233)
         random.shuffle(goals)
         weights = [goal['weight'] for goal in goals]
 

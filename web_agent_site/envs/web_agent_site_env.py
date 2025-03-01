@@ -9,6 +9,7 @@ from bs4.element import Comment
 from gym import spaces
 from os.path import join, dirname, abspath
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
@@ -39,7 +40,14 @@ class WebAgentSiteEnv(gym.Env):
         options = Options()
         if 'render' not in kwargs or not kwargs['render']:
             options.add_argument("--headless")  # don't show browser
+        
+        # Replace this line:
+        # self.browser = webdriver.Chrome(service=service, options=options)
+        
+        # With these lines:
+        service = Service(ChromeDriverManager().install())
         self.browser = webdriver.Chrome(service=service, options=options)
+
 
         # Set flags and values for WebShop session
         self.text_to_clickable = None
